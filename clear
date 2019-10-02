@@ -1,0 +1,814 @@
+[1mdiff --git a/Cafe_Otomasyon_Analiz.v11.suo b/Cafe_Otomasyon_Analiz.v11.suo[m
+[1mindex ac04b20..eddcb73 100644[m
+Binary files a/Cafe_Otomasyon_Analiz.v11.suo and b/Cafe_Otomasyon_Analiz.v11.suo differ
+[1mdiff --git a/Cafe_Otomasyon_Analiz/Islemler/frm_Siparisler.Designer.cs b/Cafe_Otomasyon_Analiz/Islemler/frm_Siparisler.Designer.cs[m
+[1mindex 8b86eb1..28014a1 100644[m
+[1m--- a/Cafe_Otomasyon_Analiz/Islemler/frm_Siparisler.Designer.cs[m
+[1m+++ b/Cafe_Otomasyon_Analiz/Islemler/frm_Siparisler.Designer.cs[m
+[36m@@ -29,48 +29,87 @@[m
+         private void InitializeComponent()[m
+         {[m
+             this.label1 = new System.Windows.Forms.Label();[m
+[31m-            this.label2 = new System.Windows.Forms.Label();[m
+             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();[m
+             this.button1 = new System.Windows.Forms.Button();[m
+             this.button2 = new System.Windows.Forms.Button();[m
+             this.button3 = new System.Windows.Forms.Button();[m
+             this.panel1 = new System.Windows.Forms.Panel();[m
+             this.panel2 = new System.Windows.Forms.Panel();[m
+[32m+[m[32m            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();[m
+[32m+[m[32m            this.richTextBox21 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.textBox1 = new System.Windows.Forms.TextBox();[m
+[32m+[m[32m            this.textBox2 = new System.Windows.Forms.TextBox();[m
+[32m+[m[32m            this.textBox3 = new System.Windows.Forms.TextBox();[m
+[32m+[m[32m            this.textBox4 = new System.Windows.Forms.TextBox();[m
+[32m+[m[32m            this.textBox5 = new System.Windows.Forms.TextBox();[m
+[32m+[m[32m            this.textBox6 = new System.Windows.Forms.TextBox();[m
+[32m+[m[32m            this.textBox7 = new System.Windows.Forms.TextBox();[m
+[32m+[m[32m            this.textBox8 = new System.Windows.Forms.TextBox();[m
+[32m+[m[32m            this.textBox9 = new System.Windows.Forms.TextBox();[m
+[32m+[m[32m            this.textBox10 = new System.Windows.Forms.TextBox();[m
+[32m+[m[32m            this.richTextBox1 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox2 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox3 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox4 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox5 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox6 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox7 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox8 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox9 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox10 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox11 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox12 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox13 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox14 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox15 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox16 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox17 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox18 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox19 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.richTextBox20 = new System.Windows.Forms.RichTextBox();[m
+[32m+[m[32m            this.checkBox1 = new System.Windows.Forms.CheckBox();[m
+[32m+[m[32m            this.checkBox2 = new System.Windows.Forms.CheckBox();[m
+[32m+[m[32m            this.checkBox3 = new System.Windows.Forms.CheckBox();[m
+[32m+[m[32m            this.checkBox4 = new System.Windows.Forms.CheckBox();[m
+[32m+[m[32m            this.checkBox5 = new System.Windows.Forms.CheckBox();[m
+[32m+[m[32m            this.checkBox6 = new System.Windows.Forms.CheckBox();[m
+[32m+[m[32m            this.checkBox7 = new System.Windows.Forms.CheckBox();[m
+[32m+[m[32m            this.checkBox8 = new System.Windows.Forms.CheckBox();[m
+[32m+[m[32m            this.checkBox9 = new System.Windows.Forms.CheckBox();[m
+[32m+[m[32m            this.checkBox10 = new System.Windows.Forms.CheckBox();[m
+[32m+[m[32m            this.checkBox11 = new System.Windows.Forms.CheckBox();[m
+[32m+[m[32m            this.textBox11 = new System.Windows.Forms.TextBox();[m
+[32m+[m[32m            this.richTextBox22 = new System.Windows.Forms.RichTextBox();[m
+             this.button4 = new System.Windows.Forms.Button();[m
+[32m+[m[32m            this.button5 = new System.Windows.Forms.Button();[m
+[32m+[m[32m            this.button6 = new System.Windows.Forms.Button();[m
+             this.tableLayoutPanel1.SuspendLayout();[m
+[32m+[m[32m            this.tableLayoutPanel2.SuspendLayout();[m
+             this.SuspendLayout();[m
+             // [m
+             // label1[m
+             // [m
+             this.label1.AutoSize = true;[m
+[31m-            this.label1.Location = new System.Drawing.Point(552, 28);[m
+[32m+[m[32m            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));[m
+[32m+[m[32m            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));[m
+[32m+[m[32m            this.label1.Location = new System.Drawing.Point(13, 14);[m
+             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);[m
+             this.label1.Name = "label1";[m
+[31m-            this.label1.Size = new System.Drawing.Size(47, 15);[m
+[32m+[m[32m            this.label1.Size = new System.Drawing.Size(84, 18);[m
+             this.label1.TabIndex = 0;[m
+[31m-            this.label1.Text = "label1";[m
+[31m-            // [m
+[31m-            // label2[m
+[31m-            // [m
+[31m-            this.label2.AutoSize = true;[m
+[31m-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));[m
+[31m-            this.label2.Location = new System.Drawing.Point(43, 28);[m
+[31m-            this.label2.Name = "label2";[m
+[31m-            this.label2.Size = new System.Drawing.Size(53, 18);[m
+[31m-            this.label2.TabIndex = 1;[m
+[31m-            this.label2.Text = "MASA";[m
+[32m+[m[32m            this.label1.Text = "MASA ADI";[m
+             // [m
+             // tableLayoutPanel1[m
+             // [m
+             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;[m
+             this.tableLayoutPanel1.ColumnCount = 3;[m
+[31m-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.75F));[m
+[31m-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.5F));[m
+[31m-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.75F));[m
+[32m+[m[32m            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.86863F));[m
+[32m+[m[32m            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.02413F));[m
+[32m+[m[32m            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.10724F));[m
+             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);[m
+             this.tableLayoutPanel1.Controls.Add(this.button2, 1, 0);[m
+             this.tableLayoutPanel1.Controls.Add(this.button3, 2, 0);[m
+[31m-            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 71);[m
+[32m+[m[32m            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 42);[m
+             this.tableLayoutPanel1.Name = "tableLayoutPanel1";[m
+             this.tableLayoutPanel1.RowCount = 1;[m
+             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));[m
+[36m@@ -80,13 +119,12 @@[m
+             // button1[m
+             // [m
+             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[31m-            this.button1.Enabled = false;[m
+             this.button1.FlatAppearance.BorderSize = 0;[m
+             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;[m
+             this.button1.ForeColor = System.Drawing.Color.Black;[m
+             this.button1.Location = new System.Drawing.Point(6, 6);[m
+             this.button1.Name = "button1";[m
+[31m-            this.button1.Size = new System.Drawing.Size(110, 49);[m
+[32m+[m[32m            this.button1.Size = new System.Drawing.Size(74, 49);[m
+             this.button1.TabIndex = 3;[m
+             this.button1.Text = "ADET";[m
+             this.button1.UseVisualStyleBackColor = true;[m
+[36m@@ -94,13 +132,12 @@[m
+             // button2[m
+             // [m
+             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[31m-            this.button2.Enabled = false;[m
+             this.button2.FlatAppearance.BorderSize = 0;[m
+             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;[m
+             this.button2.ForeColor = System.Drawing.Color.Black;[m
+[31m-            this.button2.Location = new System.Drawing.Point(125, 6);[m
+[32m+[m[32m            this.button2.Location = new System.Drawing.Point(89, 6);[m
+             this.button2.Name = "button2";[m
+[31m-            this.button2.Size = new System.Drawing.Size(382, 49);[m
+[32m+[m[32m            this.button2.Size = new System.Drawing.Size(410, 49);[m
+             this.button2.TabIndex = 4;[m
+             this.button2.Text = "ÜRÜN";[m
+             this.button2.UseVisualStyleBackColor = true;[m
+[36m@@ -108,13 +145,12 @@[m
+             // button3[m
+             // [m
+             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[31m-            this.button3.Enabled = false;[m
+             this.button3.FlatAppearance.BorderSize = 0;[m
+             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;[m
+             this.button3.ForeColor = System.Drawing.Color.Black;[m
+[31m-            this.button3.Location = new System.Drawing.Point(516, 6);[m
+[32m+[m[32m            this.button3.Location = new System.Drawing.Point(508, 6);[m
+             this.button3.Name = "button3";[m
+[31m-            this.button3.Size = new System.Drawing.Size(112, 49);[m
+[32m+[m[32m            this.button3.Size = new System.Drawing.Size(120, 49);[m
+             this.button3.TabIndex = 5;[m
+             this.button3.Text = "FİYAT";[m
+             this.button3.UseVisualStyleBackColor = true;[m
+[36m@@ -125,7 +161,7 @@[m
+             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;[m
+             this.panel1.Location = new System.Drawing.Point(0, 0);[m
+             this.panel1.Name = "panel1";[m
+[31m-            this.panel1.Size = new System.Drawing.Size(5, 448);[m
+[32m+[m[32m            this.panel1.Size = new System.Drawing.Size(5, 514);[m
+             this.panel1.TabIndex = 3;[m
+             // [m
+             // panel2[m
+[36m@@ -134,28 +170,551 @@[m
+             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;[m
+             this.panel2.Location = new System.Drawing.Point(5, 0);[m
+             this.panel2.Name = "panel2";[m
+[31m-            this.panel2.Size = new System.Drawing.Size(709, 5);[m
+[32m+[m[32m            this.panel2.Size = new System.Drawing.Size(985, 5);[m
+             this.panel2.TabIndex = 4;[m
+             // [m
+[32m+[m[32m            // tableLayoutPanel2[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.tableLayoutPanel2.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;[m
+[32m+[m[32m            this.tableLayoutPanel2.ColumnCount = 4;[m
+[32m+[m[32m            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.86863F));[m
+[32m+[m[32m            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.02413F));[m
+[32m+[m[32m            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.10724F));[m
+[32m+[m[32m            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox21, 1, 10);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 0);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.textBox2, 0, 1);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.textBox3, 0, 2);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.textBox4, 0, 3);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.textBox5, 0, 4);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.textBox6, 0, 5);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.textBox7, 0, 6);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.textBox8, 0, 7);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.textBox9, 0, 8);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.textBox10, 0, 9);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox1, 1, 0);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox2, 1, 1);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox3, 1, 2);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox4, 1, 3);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox5, 1, 4);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox6, 1, 5);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox7, 1, 6);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox8, 1, 7);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox9, 1, 8);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox10, 1, 9);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox11, 2, 0);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox12, 2, 1);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox13, 2, 2);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox14, 2, 3);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox15, 2, 4);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox16, 2, 5);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox17, 2, 6);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox18, 2, 7);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox19, 2, 8);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox20, 2, 9);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.checkBox1, 3, 0);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.checkBox2, 3, 1);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.checkBox3, 3, 2);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.checkBox4, 3, 3);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.checkBox5, 3, 4);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.checkBox6, 3, 5);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.checkBox7, 3, 6);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.checkBox8, 3, 7);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.checkBox9, 3, 8);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.checkBox10, 3, 9);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.checkBox11, 3, 10);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.textBox11, 0, 10);[m
+[32m+[m[32m            this.tableLayoutPanel2.Controls.Add(this.richTextBox22, 2, 10);[m
+[32m+[m[32m            this.tableLayoutPanel2.Location = new System.Drawing.Point(11, 103);[m
+[32m+[m[32m            this.tableLayoutPanel2.Name = "tableLayoutPanel2";[m
+[32m+[m[32m            this.tableLayoutPanel2.RowCount = 11;[m
+[32m+[m[32m            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));[m
+[32m+[m[32m            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));[m
+[32m+[m[32m            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));[m
+[32m+[m[32m            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));[m
+[32m+[m[32m            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));[m
+[32m+[m[32m            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));[m
+[32m+[m[32m            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));[m
+[32m+[m[32m            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));[m
+[32m+[m[32m            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));[m
+[32m+[m[32m            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));[m
+[32m+[m[32m            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));[m
+[32m+[m[32m            this.tableLayoutPanel2.Size = new System.Drawing.Size(661, 381);[m
+[32m+[m[32m            this.tableLayoutPanel2.TabIndex = 5;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox21[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox21.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox21.Location = new System.Drawing.Point(88, 356);[m
+[32m+[m[32m            this.richTextBox21.Name = "richTextBox21";[m
+[32m+[m[32m            this.richTextBox21.Size = new System.Drawing.Size(406, 19);[m
+[32m+[m[32m            this.richTextBox21.TabIndex = 4;[m
+[32m+[m[32m            this.richTextBox21.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // textBox1[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;[m
+[32m+[m[32m            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.textBox1.Enabled = false;[m
+[32m+[m[32m            this.textBox1.Location = new System.Drawing.Point(6, 6);[m
+[32m+[m[32m            this.textBox1.Name = "textBox1";[m
+[32m+[m[32m            this.textBox1.Size = new System.Drawing.Size(73, 21);[m
+[32m+[m[32m            this.textBox1.TabIndex = 0;[m
+[32m+[m[32m            this.textBox1.Text = "1";[m
+[32m+[m[32m            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // textBox2[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;[m
+[32m+[m[32m            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.textBox2.Enabled = false;[m
+[32m+[m[32m            this.textBox2.Location = new System.Drawing.Point(6, 41);[m
+[32m+[m[32m            this.textBox2.Name = "textBox2";[m
+[32m+[m[32m            this.textBox2.Size = new System.Drawing.Size(73, 21);[m
+[32m+[m[32m            this.textBox2.TabIndex = 1;[m
+[32m+[m[32m            this.textBox2.Text = "2";[m
+[32m+[m[32m            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // textBox3[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;[m
+[32m+[m[32m            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.textBox3.Enabled = false;[m
+[32m+[m[32m            this.textBox3.Location = new System.Drawing.Point(6, 76);[m
+[32m+[m[32m            this.textBox3.Name = "textBox3";[m
+[32m+[m[32m            this.textBox3.Size = new System.Drawing.Size(73, 21);[m
+[32m+[m[32m            this.textBox3.TabIndex = 1;[m
+[32m+[m[32m            this.textBox3.Text = "3";[m
+[32m+[m[32m            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // textBox4[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;[m
+[32m+[m[32m            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.textBox4.Enabled = false;[m
+[32m+[m[32m            this.textBox4.Location = new System.Drawing.Point(6, 111);[m
+[32m+[m[32m            this.textBox4.Name = "textBox4";[m
+[32m+[m[32m            this.textBox4.Size = new System.Drawing.Size(73, 21);[m
+[32m+[m[32m            this.textBox4.TabIndex = 1;[m
+[32m+[m[32m            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // textBox5[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;[m
+[32m+[m[32m            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.textBox5.Enabled = false;[m
+[32m+[m[32m            this.textBox5.Location = new System.Drawing.Point(6, 146);[m
+[32m+[m[32m            this.textBox5.Name = "textBox5";[m
+[32m+[m[32m            this.textBox5.Size = new System.Drawing.Size(73, 21);[m
+[32m+[m[32m            this.textBox5.TabIndex = 1;[m
+[32m+[m[32m            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // textBox6[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;[m
+[32m+[m[32m            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.textBox6.Enabled = false;[m
+[32m+[m[32m            this.textBox6.Location = new System.Drawing.Point(6, 181);[m
+[32m+[m[32m            this.textBox6.Name = "textBox6";[m
+[32m+[m[32m            this.textBox6.Size = new System.Drawing.Size(73, 21);[m
+[32m+[m[32m            this.textBox6.TabIndex = 1;[m
+[32m+[m[32m            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // textBox7[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;[m
+[32m+[m[32m            this.textBox7.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.textBox7.Enabled = false;[m
+[32m+[m[32m            this.textBox7.Location = new System.Drawing.Point(6, 216);[m
+[32m+[m[32m            this.textBox7.Name = "textBox7";[m
+[32m+[m[32m            this.textBox7.Size = new System.Drawing.Size(73, 21);[m
+[32m+[m[32m            this.textBox7.TabIndex = 1;[m
+[32m+[m[32m            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // textBox8[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;[m
+[32m+[m[32m            this.textBox8.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.textBox8.Enabled = false;[m
+[32m+[m[32m            this.textBox8.Location = new System.Drawing.Point(6, 251);[m
+[32m+[m[32m            this.textBox8.Name = "textBox8";[m
+[32m+[m[32m            this.textBox8.Size = new System.Drawing.Size(73, 21);[m
+[32m+[m[32m            this.textBox8.TabIndex = 1;[m
+[32m+[m[32m            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // textBox9[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;[m
+[32m+[m[32m            this.textBox9.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.textBox9.Enabled = false;[m
+[32m+[m[32m            this.textBox9.Location = new System.Drawing.Point(6, 286);[m
+[32m+[m[32m            this.textBox9.Name = "textBox9";[m
+[32m+[m[32m            this.textBox9.Size = new System.Drawing.Size(73, 21);[m
+[32m+[m[32m            this.textBox9.TabIndex = 1;[m
+[32m+[m[32m            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // textBox10[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;[m
+[32m+[m[32m            this.textBox10.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.textBox10.Enabled = false;[m
+[32m+[m[32m            this.textBox10.Location = new System.Drawing.Point(6, 321);[m
+[32m+[m[32m            this.textBox10.Name = "textBox10";[m
+[32m+[m[32m            this.textBox10.Size = new System.Drawing.Size(73, 21);[m
+[32m+[m[32m            this.textBox10.TabIndex = 1;[m
+[32m+[m[32m            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox1[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox1.Location = new System.Drawing.Point(88, 6);[m
+[32m+[m[32m            this.richTextBox1.Name = "richTextBox1";[m
+[32m+[m[32m            this.richTextBox1.Size = new System.Drawing.Size(406, 26);[m
+[32m+[m[32m            this.richTextBox1.TabIndex = 2;[m
+[32m+[m[32m            this.richTextBox1.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox2[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox2.Location = new System.Drawing.Point(88, 41);[m
+[32m+[m[32m            this.richTextBox2.Name = "richTextBox2";[m
+[32m+[m[32m            this.richTextBox2.Size = new System.Drawing.Size(406, 26);[m
+[32m+[m[32m            this.richTextBox2.TabIndex = 3;[m
+[32m+[m[32m            this.richTextBox2.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox3[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox3.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox3.Location = new System.Drawing.Point(88, 76);[m
+[32m+[m[32m            this.richTextBox3.Name = "richTextBox3";[m
+[32m+[m[32m            this.richTextBox3.Size = new System.Drawing.Size(406, 26);[m
+[32m+[m[32m            this.richTextBox3.TabIndex = 3;[m
+[32m+[m[32m            this.richTextBox3.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox4[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox4.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox4.Location = new System.Drawing.Point(88, 111);[m
+[32m+[m[32m            this.richTextBox4.Name = "richTextBox4";[m
+[32m+[m[32m            this.richTextBox4.Size = new System.Drawing.Size(406, 26);[m
+[32m+[m[32m            this.richTextBox4.TabIndex = 3;[m
+[32m+[m[32m            this.richTextBox4.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox5[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox5.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox5.Location = new System.Drawing.Point(88, 146);[m
+[32m+[m[32m            this.richTextBox5.Name = "richTextBox5";[m
+[32m+[m[32m            this.richTextBox5.Size = new System.Drawing.Size(406, 26);[m
+[32m+[m[32m            this.richTextBox5.TabIndex = 3;[m
+[32m+[m[32m            this.richTextBox5.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox6[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox6.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox6.Location = new System.Drawing.Point(88, 181);[m
+[32m+[m[32m            this.richTextBox6.Name = "richTextBox6";[m
+[32m+[m[32m            this.richTextBox6.Size = new System.Drawing.Size(406, 26);[m
+[32m+[m[32m            this.richTextBox6.TabIndex = 3;[m
+[32m+[m[32m            this.richTextBox6.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox7[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox7.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox7.Location = new System.Drawing.Point(88, 216);[m
+[32m+[m[32m            this.richTextBox7.Name = "richTextBox7";[m
+[32m+[m[32m            this.richTextBox7.Size = new System.Drawing.Size(406, 26);[m
+[32m+[m[32m            this.richTextBox7.TabIndex = 3;[m
+[32m+[m[32m            this.richTextBox7.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox8[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox8.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox8.Location = new System.Drawing.Point(88, 251);[m
+[32m+[m[32m            this.richTextBox8.Name = "richTextBox8";[m
+[32m+[m[32m            this.richTextBox8.Size = new System.Drawing.Size(406, 26);[m
+[32m+[m[32m            this.richTextBox8.TabIndex = 3;[m
+[32m+[m[32m            this.richTextBox8.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox9[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox9.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox9.Location = new System.Drawing.Point(88, 286);[m
+[32m+[m[32m            this.richTextBox9.Name = "richTextBox9";[m
+[32m+[m[32m            this.richTextBox9.Size = new System.Drawing.Size(406, 26);[m
+[32m+[m[32m            this.richTextBox9.TabIndex = 3;[m
+[32m+[m[32m            this.richTextBox9.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox10[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox10.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox10.Location = new System.Drawing.Point(88, 321);[m
+[32m+[m[32m            this.richTextBox10.Name = "richTextBox10";[m
+[32m+[m[32m            this.richTextBox10.Size = new System.Drawing.Size(406, 26);[m
+[32m+[m[32m            this.richTextBox10.TabIndex = 3;[m
+[32m+[m[32m            this.richTextBox10.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox11[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox11.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox11.Location = new System.Drawing.Point(503, 6);[m
+[32m+[m[32m            this.richTextBox11.Name = "richTextBox11";[m
+[32m+[m[32m            this.richTextBox11.Size = new System.Drawing.Size(117, 26);[m
+[32m+[m[32m            this.richTextBox11.TabIndex = 4;[m
+[32m+[m[32m            this.richTextBox11.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox12[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox12.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox12.Location = new System.Drawing.Point(503, 41);[m
+[32m+[m[32m            this.richTextBox12.Name = "richTextBox12";[m
+[32m+[m[32m            this.richTextBox12.Size = new System.Drawing.Size(117, 26);[m
+[32m+[m[32m            this.richTextBox12.TabIndex = 4;[m
+[32m+[m[32m            this.richTextBox12.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox13[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox13.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox13.Location = new System.Drawing.Point(503, 76);[m
+[32m+[m[32m            this.richTextBox13.Name = "richTextBox13";[m
+[32m+[m[32m            this.richTextBox13.Size = new System.Drawing.Size(117, 26);[m
+[32m+[m[32m            this.richTextBox13.TabIndex = 4;[m
+[32m+[m[32m            this.richTextBox13.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox14[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox14.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox14.Location = new System.Drawing.Point(503, 111);[m
+[32m+[m[32m            this.richTextBox14.Name = "richTextBox14";[m
+[32m+[m[32m            this.richTextBox14.Size = new System.Drawing.Size(117, 26);[m
+[32m+[m[32m            this.richTextBox14.TabIndex = 4;[m
+[32m+[m[32m            this.richTextBox14.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox15[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox15.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox15.Location = new System.Drawing.Point(503, 146);[m
+[32m+[m[32m            this.richTextBox15.Name = "richTextBox15";[m
+[32m+[m[32m            this.richTextBox15.Size = new System.Drawing.Size(117, 26);[m
+[32m+[m[32m            this.richTextBox15.TabIndex = 4;[m
+[32m+[m[32m            this.richTextBox15.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox16[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox16.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox16.Location = new System.Drawing.Point(503, 181);[m
+[32m+[m[32m            this.richTextBox16.Name = "richTextBox16";[m
+[32m+[m[32m            this.richTextBox16.Size = new System.Drawing.Size(117, 26);[m
+[32m+[m[32m            this.richTextBox16.TabIndex = 4;[m
+[32m+[m[32m            this.richTextBox16.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox17[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox17.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox17.Location = new System.Drawing.Point(503, 216);[m
+[32m+[m[32m            this.richTextBox17.Name = "richTextBox17";[m
+[32m+[m[32m            this.richTextBox17.Size = new System.Drawing.Size(117, 26);[m
+[32m+[m[32m            this.richTextBox17.TabIndex = 4;[m
+[32m+[m[32m            this.richTextBox17.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox18[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox18.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox18.Location = new System.Drawing.Point(503, 251);[m
+[32m+[m[32m            this.richTextBox18.Name = "richTextBox18";[m
+[32m+[m[32m            this.richTextBox18.Size = new System.Drawing.Size(117, 26);[m
+[32m+[m[32m            this.richTextBox18.TabIndex = 4;[m
+[32m+[m[32m            this.richTextBox18.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox19[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox19.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox19.Location = new System.Drawing.Point(503, 286);[m
+[32m+[m[32m            this.richTextBox19.Name = "richTextBox19";[m
+[32m+[m[32m            this.richTextBox19.Size = new System.Drawing.Size(117, 26);[m
+[32m+[m[32m            this.richTextBox19.TabIndex = 4;[m
+[32m+[m[32m            this.richTextBox19.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox20[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox20.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox20.Location = new System.Drawing.Point(503, 321);[m
+[32m+[m[32m            this.richTextBox20.Name = "richTextBox20";[m
+[32m+[m[32m            this.richTextBox20.Size = new System.Drawing.Size(117, 26);[m
+[32m+[m[32m            this.richTextBox20.TabIndex = 4;[m
+[32m+[m[32m            this.richTextBox20.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // checkBox1[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.checkBox1.AutoSize = true;[m
+[32m+[m[32m            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.checkBox1.Location = new System.Drawing.Point(629, 6);[m
+[32m+[m[32m            this.checkBox1.Name = "checkBox1";[m
+[32m+[m[32m            this.checkBox1.Size = new System.Drawing.Size(26, 26);[m
+[32m+[m[32m            this.checkBox1.TabIndex = 5;[m
+[32m+[m[32m            this.checkBox1.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // checkBox2[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.checkBox2.AutoSize = true;[m
+[32m+[m[32m            this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.checkBox2.Location = new System.Drawing.Point(629, 41);[m
+[32m+[m[32m            this.checkBox2.Name = "checkBox2";[m
+[32m+[m[32m            this.checkBox2.Size = new System.Drawing.Size(26, 26);[m
+[32m+[m[32m            this.checkBox2.TabIndex = 6;[m
+[32m+[m[32m            this.checkBox2.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // checkBox3[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.checkBox3.AutoSize = true;[m
+[32m+[m[32m            this.checkBox3.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.checkBox3.Location = new System.Drawing.Point(629, 76);[m
+[32m+[m[32m            this.checkBox3.Name = "checkBox3";[m
+[32m+[m[32m            this.checkBox3.Size = new System.Drawing.Size(26, 26);[m
+[32m+[m[32m            this.checkBox3.TabIndex = 6;[m
+[32m+[m[32m            this.checkBox3.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // checkBox4[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.checkBox4.AutoSize = true;[m
+[32m+[m[32m            this.checkBox4.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.checkBox4.Location = new System.Drawing.Point(629, 111);[m
+[32m+[m[32m            this.checkBox4.Name = "checkBox4";[m
+[32m+[m[32m            this.checkBox4.Size = new System.Drawing.Size(26, 26);[m
+[32m+[m[32m            this.checkBox4.TabIndex = 6;[m
+[32m+[m[32m            this.checkBox4.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // checkBox5[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.checkBox5.AutoSize = true;[m
+[32m+[m[32m            this.checkBox5.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.checkBox5.Location = new System.Drawing.Point(629, 146);[m
+[32m+[m[32m            this.checkBox5.Name = "checkBox5";[m
+[32m+[m[32m            this.checkBox5.Size = new System.Drawing.Size(26, 26);[m
+[32m+[m[32m            this.checkBox5.TabIndex = 6;[m
+[32m+[m[32m            this.checkBox5.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // checkBox6[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.checkBox6.AutoSize = true;[m
+[32m+[m[32m            this.checkBox6.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.checkBox6.Location = new System.Drawing.Point(629, 181);[m
+[32m+[m[32m            this.checkBox6.Name = "checkBox6";[m
+[32m+[m[32m            this.checkBox6.Size = new System.Drawing.Size(26, 26);[m
+[32m+[m[32m            this.checkBox6.TabIndex = 6;[m
+[32m+[m[32m            this.checkBox6.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // checkBox7[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.checkBox7.AutoSize = true;[m
+[32m+[m[32m            this.checkBox7.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.checkBox7.Location = new System.Drawing.Point(629, 216);[m
+[32m+[m[32m            this.checkBox7.Name = "checkBox7";[m
+[32m+[m[32m            this.checkBox7.Size = new System.Drawing.Size(26, 26);[m
+[32m+[m[32m            this.checkBox7.TabIndex = 6;[m
+[32m+[m[32m            this.checkBox7.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // checkBox8[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.checkBox8.AutoSize = true;[m
+[32m+[m[32m            this.checkBox8.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.checkBox8.Location = new System.Drawing.Point(629, 251);[m
+[32m+[m[32m            this.checkBox8.Name = "checkBox8";[m
+[32m+[m[32m            this.checkBox8.Size = new System.Drawing.Size(26, 26);[m
+[32m+[m[32m            this.checkBox8.TabIndex = 6;[m
+[32m+[m[32m            this.checkBox8.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // checkBox9[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.checkBox9.AutoSize = true;[m
+[32m+[m[32m            this.checkBox9.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.checkBox9.Location = new System.Drawing.Point(629, 286);[m
+[32m+[m[32m            this.checkBox9.Name = "checkBox9";[m
+[32m+[m[32m            this.checkBox9.Size = new System.Drawing.Size(26, 26);[m
+[32m+[m[32m            this.checkBox9.TabIndex = 6;[m
+[32m+[m[32m            this.checkBox9.Text = "checkBox2";[m
+[32m+[m[32m            this.checkBox9.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // checkBox10[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.checkBox10.AutoSize = true;[m
+[32m+[m[32m            this.checkBox10.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.checkBox10.Location = new System.Drawing.Point(629, 321);[m
+[32m+[m[32m            this.checkBox10.Name = "checkBox10";[m
+[32m+[m[32m            this.checkBox10.Size = new System.Drawing.Size(26, 26);[m
+[32m+[m[32m            this.checkBox10.TabIndex = 6;[m
+[32m+[m[32m            this.checkBox10.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // checkBox11[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.checkBox11.AutoSize = true;[m
+[32m+[m[32m            this.checkBox11.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.checkBox11.Location = new System.Drawing.Point(629, 356);[m
+[32m+[m[32m            this.checkBox11.Name = "checkBox11";[m
+[32m+[m[32m            this.checkBox11.Size = new System.Drawing.Size(26, 19);[m
+[32m+[m[32m            this.checkBox11.TabIndex = 6;[m
+[32m+[m[32m            this.checkBox11.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // textBox11[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;[m
+[32m+[m[32m            this.textBox11.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.textBox11.Enabled = false;[m
+[32m+[m[32m            this.textBox11.Location = new System.Drawing.Point(6, 356);[m
+[32m+[m[32m            this.textBox11.Name = "textBox11";[m
+[32m+[m[32m            this.textBox11.Size = new System.Drawing.Size(73, 21);[m
+[32m+[m[32m            this.textBox11.TabIndex = 7;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // richTextBox22[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.richTextBox22.Dock = System.Windows.Forms.DockStyle.Fill;[m
+[32m+[m[32m            this.richTextBox22.Location = new System.Drawing.Point(503, 356);[m
+[32m+[m[32m            this.richTextBox22.Name = "richTextBox22";[m
+[32m+[m[32m            this.richTextBox22.Size = new System.Drawing.Size(117, 19);[m
+[32m+[m[32m            this.richTextBox22.TabIndex = 9;[m
+[32m+[m[32m            this.richTextBox22.Text = "";[m
+[32m+[m[32m            //[m[41m [m
+             // button4[m
+             // [m
+[31m-            this.button4.Location = new System.Drawing.Point(162, 20);[m
+[32m+[m[32m            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;[m
+[32m+[m[32m            this.button4.Location = new System.Drawing.Point(762, 48);[m
+             this.button4.Name = "button4";[m
+[31m-            this.button4.Size = new System.Drawing.Size(75, 23);[m
+[31m-            this.button4.TabIndex = 5;[m
+[31m-            this.button4.Text = "button4";[m
+[32m+[m[32m            this.button4.Size = new System.Drawing.Size(161, 62);[m
+[32m+[m[32m            this.button4.TabIndex = 6;[m
+[32m+[m[32m            this.button4.Text = "SİPARİŞ AL";[m
+[32m+[m[32m            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;[m
+             this.button4.UseVisualStyleBackColor = true;[m
+             // [m
+[32m+[m[32m            // button5[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.button5.Location = new System.Drawing.Point(762, 138);[m
+[32m+[m[32m            this.button5.Name = "button5";[m
+[32m+[m[32m            this.button5.Size = new System.Drawing.Size(161, 62);[m
+[32m+[m[32m            this.button5.TabIndex = 6;[m
+[32m+[m[32m            this.button5.Text = "HESAP AL";[m
+[32m+[m[32m            this.button5.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            // button6[m
+[32m+[m[32m            //[m[41m [m
+[32m+[m[32m            this.button6.Location = new System.Drawing.Point(592, 484);[m
+[32m+[m[32m            this.button6.Name = "button6";[m
+[32m+[m[32m            this.button6.Size = new System.Drawing.Size(80, 26);[m
+[32m+[m[32m            this.button6.TabIndex = 7;[m
+[32m+[m[32m            this.button6.Text = "HEPSİ";[m
+[32m+[m[32m            this.button6.UseVisualStyleBackColor = true;[m
+[32m+[m[32m            //[m[41m [m
+             // frm_Siparisler[m
+             // [m
+             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);[m
+             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;[m
+[31m-            this.ClientSize = new System.Drawing.Size(714, 448);[m
+[32m+[m[32m            this.ClientSize = new System.Drawing.Size(990, 514);[m
+[32m+[m[32m            this.Controls.Add(this.button6);[m
+[32m+[m[32m            this.Controls.Add(this.button5);[m
+             this.Controls.Add(this.button4);[m
+[32m+[m[32m            this.Controls.Add(this.tableLayoutPanel2);[m
+             this.Controls.Add(this.panel2);[m
+             this.Controls.Add(this.panel1);[m
+             this.Controls.Add(this.tableLayoutPanel1);[m
+[31m-            this.Controls.Add(this.label2);[m
+             this.Controls.Add(this.label1);[m
+             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));[m
+             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);[m
+[36m@@ -166,6 +725,8 @@[m
+             this.Text = "SİPARİŞLER";[m
+             this.Load += new System.EventHandler(this.frm_Siparisler_Load);[m
+             this.tableLayoutPanel1.ResumeLayout(false);[m
+[32m+[m[32m            this.tableLayoutPanel2.ResumeLayout(false);[m
+[32m+[m[32m            this.tableLayoutPanel2.PerformLayout();[m
+             this.ResumeLayout(false);[m
+             this.PerformLayout();[m
+ [m
+[36m@@ -174,13 +735,59 @@[m
+         #endregion[m
+ [m
+         private System.Windows.Forms.Label label1;[m
+[31m-        private System.Windows.Forms.Label label2;[m
+         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;[m
+         private System.Windows.Forms.Button button1;[m
+         private System.Windows.Forms.Button button2;[m
+         private System.Windows.Forms.Button button3;[m
+         private System.Windows.Forms.Panel panel1;[m
+         private System.Windows.Forms.Panel panel2;[m
+[32m+[m[32m        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;[m
+[32m+[m[32m        private System.Windows.Forms.TextBox textBox1;[m
+[32m+[m[32m        private System.Windows.Forms.TextBox textBox2;[m
+[32m+[m[32m        private System.Windows.Forms.TextBox textBox3;[m
+[32m+[m[32m        private System.Windows.Forms.TextBox textBox4;[m
+[32m+[m[32m        private System.Windows.Forms.TextBox textBox5;[m
+[32m+[m[32m        private System.Windows.Forms.TextBox textBox6;[m
+[32m+[m[32m        private System.Windows.Forms.TextBox textBox7;[m
+[32m+[m[32m        private System.Windows.Forms.TextBox textBox8;[m
+[32m+[m[32m        private System.Windows.Forms.TextBox textBox9;[m
+[32m+[m[32m        private System.Windows.Forms.TextBox textBox10;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox1;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox2;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox3;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox4;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox5;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox6;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox7;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox8;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox9;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox10;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox11;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox12;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox13;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox14;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox15;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox16;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox17;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox18;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox19;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox20;[m
+[32m+[m[32m        private System.Windows.Forms.CheckBox checkBox1;[m
+[32m+[m[32m        private System.Windows.Forms.CheckBox checkBox2;[m
+[32m+[m[32m        private System.Windows.Forms.CheckBox checkBox3;[m
+[32m+[m[32m        private System.Windows.Forms.CheckBox checkBox4;[m
+[32m+[m[32m        private System.Windows.Forms.CheckBox checkBox5;[m
+[32m+[m[32m        private System.Windows.Forms.CheckBox checkBox6;[m
+[32m+[m[32m        private System.Windows.Forms.CheckBox checkBox7;[m
+[32m+[m[32m        private System.Windows.Forms.CheckBox checkBox8;[m
+[32m+[m[32m        private System.Windows.Forms.CheckBox checkBox9;[m
+[32m+[m[32m        private System.Windows.Forms.CheckBox checkBox10;[m
+[32m+[m[32m        private System.Windows.Forms.CheckBox checkBox11;[m
+[32m+[m[32m        private System.Windows.Forms.TextBox textBox11;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox22;[m
+[32m+[m[32m        private System.Windows.Forms.RichTextBox richTextBox21;[m
+         private System.Windows.Forms.Button button4;[m
+[32m+[m[32m        private System.Windows.Forms.Button button5;[m
+[32m+[m[32m        private System.Windows.Forms.Button button6;[m
+     }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/Cafe_Otomasyon_Analiz/bin/Debug/Cafe_Otomasyon_Analiz.exe b/Cafe_Otomasyon_Analiz/bin/Debug/Cafe_Otomasyon_Analiz.exe[m
+[1mindex 4dc9c17..f23ddb2 100644[m
+Binary files a/Cafe_Otomasyon_Analiz/bin/Debug/Cafe_Otomasyon_Analiz.exe and b/Cafe_Otomasyon_Analiz/bin/Debug/Cafe_Otomasyon_Analiz.exe differ
+[1mdiff --git a/Cafe_Otomasyon_Analiz/bin/Debug/Cafe_Otomasyon_Analiz.pdb b/Cafe_Otomasyon_Analiz/bin/Debug/Cafe_Otomasyon_Analiz.pdb[m
+[1mindex bc8a486..06ed9d7 100644[m
+Binary files a/Cafe_Otomasyon_Analiz/bin/Debug/Cafe_Otomasyon_Analiz.pdb and b/Cafe_Otomasyon_Analiz/bin/Debug/Cafe_Otomasyon_Analiz.pdb differ
+[1mdiff --git a/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.csproj.GenerateResource.Cache b/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.csproj.GenerateResource.Cache[m
+[1mindex 04da069..b0e4ea4 100644[m
+Binary files a/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.csproj.GenerateResource.Cache and b/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.csproj.GenerateResource.Cache differ
+[1mdiff --git a/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.exe b/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.exe[m
+[1mindex 4dc9c17..f23ddb2 100644[m
+Binary files a/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.exe and b/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.exe differ
+[1mdiff --git a/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.pdb b/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.pdb[m
+[1mindex bc8a486..06ed9d7 100644[m
+Binary files a/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.pdb and b/Cafe_Otomasyon_Analiz/obj/Debug/Cafe_Otomasyon_Analiz.pdb differ
