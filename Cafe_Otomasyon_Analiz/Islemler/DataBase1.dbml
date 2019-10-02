@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Cafe_Otomasyon" Class="DataBase1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=IBRAHIM-KARACA\MSSQLSERVER01;Initial Catalog=Cafe_Otomasyon;Integrated Security=True" SettingsObjectName="Cafe_Otomasyon_Analiz.Properties.Settings" SettingsPropertyName="Cafe_OtomasyonConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.STOKLAR" Member="STOKLARs">
+    <Type Name="STOKLAR">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="STOKKODU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STOKADI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STOKTURU" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EKTARIH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SONTARIH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BIRIM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FIYAT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.URUNLER" Member="URUNLERs">
+    <Type Name="URUNLER">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="URUNADI" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TUR" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RESIM" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FIYAT" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EKTARIH" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ACIKLAMA" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SATISSAYI" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
